@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html ng-app="demoApp">
+
+<head>
+  <title>Angular Labelauty</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+  <script src="./release/js/angular-labelauty.min.js"></script>
+  <script src="demo/demoApp.js"></script>
+  <script src="demo/demoController.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/default.min.css">
+  <link rel="stylesheet" href="demo/styles.css">
+  <link rel="stylesheet" href="release/css/angular-labelauty.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+</head>
+
+<body>
+  <header class="navbar navbar-static-top navbar-fixed-top navbar-default" id="top">
+    <div class="container">
+      <div class="navbar-header">
+        <button aria-controls="bs-navbar" aria-expanded="false" class="collapsed navbar-toggle" data-target="#asp-navbar" data-toggle="collapse" type="button">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <nav class="collapse navbar-collapse clearfix">
+        <a class="navbar-brand" href="https://tablelist.github.io/angular-labelauty">Angular Labelauty</a>
+        <ul class="asp-navbar nav navbar-nav pull-left">
+          <li>
+            <a href="#getting-started">Getting Started</a>
+          </li>
+          <li>
+            <a href="#example">Example</a>
+          </li>
+          <li>
+            <a href="#docs">Docs</a>
+          </li>
+        </ul>
+        <ul class="asp-navbar nav navbar-nav pull-right">
+          <li>
+            <a href="https://github.com/tablelist/angular-labelauty">Github Repo</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="container clearfix">
+    <div id="getting-started">
+      <h2>Getting Started</h2>
+      <p>
+        Take a look at the <a href="#docs">docs</a> for the API.
+      </p>
+      <p>
+        Follow these steps to get started.
+      </p>
+      <br>
+      <p>
+        <strong>1) Install via Bower</strong>
+      </p>
+      <pre>
+        <code class="bash">
+bower install angular-labelauty --save
+        </code>
+      </pre>
+      <p>
+        <strong>2) Add JS and CSS</strong>
+      </p>
+      <pre>
+        <code class="bash">
+&lt;script src="bower_components/angular-labelauty/release/js/angular-labelauty.min.js"&gt;&lt;/script&gt;
+
+&lt;link rel="stylesheet" href="bower_components/angular-labelauty/release/css/angular-labelauty.min.css"&gt;
+        </code>
+      </pre>
+      <p>
+        <strong>3) Add Angular dependency</strong>
+      </p>
+      <pre>
+        <code class="bash">
+angular.module('demoApp', [
+  'angular-labelauty'
+]);
+        </code>
+      </pre>
+    </div>
+    <div id="example" ng-controller="demoController">
+      <h2>Example</h2>
+      <div class="form-group col-sm-4">
+        <label class="content-label">Simple Checkbox</label>
+        <div>
+          <labelauty ng-model="onOffDemoForm.on" label="{{ onOffDemoForm.on ? 'Turn Off' : 'Turn On' }}"></labelauty>
+        </div>
+      </div>
+      <div class="form-group col-sm-4">
+        <label class="content-label">Disabled Checkbox</label>
+        <div>
+          <labelauty ng-model="disabledDemoForm.on" label="{{ disabledDemoForm.on ? 'Turn Off' : 'Turn On' }}" ng-disabled="{{ disabledDemoForm }}"></labelauty>
+          <labelauty ng-model="!disabledDemoForm.on" label="{{ !disabledDemoForm.on ? 'Turn Off' : 'Turn On' }}" ng-disabled="{{ disabledDemoForm }}"></labelauty>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+.labelauty {
+  margin-right: 5px;
+  margin-bottom: 5px;
+  display: inline-block;
+  float: left;
+  padding: 0;
+}
+.labelauty input {
+  display: none;
+}
+.labelauty .labelauty-inner {
+  box-shadow: none;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 10px;
+}
+.labelauty .labelauty-inner.active {
+  background: #35B1FE;
+  color: white;
+}
+.labelauty .labelauty-inner.active .labelauty-inner-icon {
+  font-size: 12px;
+  color: white;
+  top: 0;
+  left: 0;
+}
+.labelauty .labelauty-inner .labelauty-inner-icon {
+  position: relative;
+  top: -1px;
+  left: 1px;
+  margin: 0;
+  padding: 0;
+  width: 20px;
+  font-size: 8px;
+  text-align: left;
+  color: #EFEFEF;
+}
