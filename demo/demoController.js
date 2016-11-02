@@ -7,6 +7,7 @@ angular.module('demoApp').controller('demoController', [
 
     $scope.disabledDemoForm = {
       on: false,
+      off: true,
       disabled: true
     };
   }

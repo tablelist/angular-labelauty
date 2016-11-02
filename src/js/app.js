@@ -9,7 +9,7 @@ angular.module('angular-labelauty').directive('labelauty', [
       scope: {
         label: '@',
         icon: '@',
-        ngDisabled: '@'
+        ngDisabled: '=?'
       },
       link: function(scope, element, attrs, ngModelCtrl) {
         _compileAndReplaceElement();
@@ -27,7 +27,10 @@ angular.module('angular-labelauty').directive('labelauty', [
           ngModelCtrl.$setViewValue(scope.checked);
         };
 
-        attrs.$observe('ngDisabled', val => scope.disabled = val);
+        scope.$watch('ngDisabled', val => {
+          console.log('ngDisabled', val);
+          scope.disabled = val;
+        });
 
         scope.$watch(() => {
           return ngModelCtrl.$modelValue;
