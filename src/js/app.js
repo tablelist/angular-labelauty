@@ -39,7 +39,7 @@ angular.module('angular-labelauty').directive('labelauty', [
 
           let wrapperEl = angular.element('<div class="labelauty"></div>');
 
-          let innerEl = angular.element(`<div class="labelauty-inner btn btn-default" ng-class="{ 'active' : checked, 'disabled' : disabled }" ng-click="toggleModelValue($event)" ng-class="{ \'disabled\' : disabled }">
+          let innerEl = angular.element(`<div class="labelauty-inner" ng-class="{ 'active' : checked, 'disabled' : disabled }" ng-click="toggleModelValue($event)" ng-class="{ \'disabled\' : disabled }">
             <i class="labelauty-inner-icon fa" ng-class="{ 'fa-check' : checked, 'fa-circle' : !checked }"></i>
             <span>{{ label }}</span>
             </div>`);

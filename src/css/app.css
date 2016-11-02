@@ -13,10 +13,29 @@
   font-size: 11px;
   font-weight: 600;
   padding: 10px;
+  color: #333;
+  display: inline-block;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  margin-bottom: 0;
+  user-select: none;
+  background-color: #FFF;
+  background-image: none;
+  border: 1px solid #CCC;
+  border-radius: 4px;
+  touch-action: manipulation;
+  cursor: pointer;
 }
 .labelauty .labelauty-inner.active {
   background: #35B1FE;
   color: white;
+}
+.labelauty .labelauty-inner.disabled {
+  cursor: not-allowed;
+  box-shadow: none;
+  opacity: .65;
 }
 .labelauty .labelauty-inner.active .labelauty-inner-icon {
   font-size: 12px;
@@ -33,5 +52,5 @@
   width: 20px;
   font-size: 8px;
   text-align: left;
-  color: #EFEFEF;
+  color: #BCBCBC;
 }
