@@ -20,6 +20,8 @@ angular.module('demoApp', [
 ]);
 ```
 
+> NOTE: this plugin requires jQuery and Font Awesome
+
 ### Usage
 
 ``` html
