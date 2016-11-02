@@ -105,8 +105,8 @@ angular.module('demoApp', [
           <input type="checkbox" ng-model="disabledDemoForm.disabled">
         </div>
         <div>
-          <labelauty ng-model="disabledDemoForm.on" label="{{ disabledDemoForm.on ? 'Turn Off' : 'Turn On' }}" ng-disabled="disabledDemoForm.disabled"></labelauty>
-          <labelauty ng-model="disabledDemoForm.off" label="{{ !disabledDemoForm.off ? 'Turn Off' : 'Turn On' }}" ng-disabled="disabledDemoForm.disabled"></labelauty>
+          <labelauty ng-model="disabledDemoForm.on" label="{{ disabledDemoForm.on ? 'Turn Off' : 'Turn On' }}" ng-disabled="isDisabled(disabledDemoForm.disabled)"></labelauty>
+          <labelauty ng-model="disabledDemoForm.off" label="{{ !disabledDemoForm.off ? 'Turn Off' : 'Turn On' }}" ng-disabled="isDisabled(!disabledDemoForm.disabled)"></labelauty>
         </div>
       </div>
     </div>

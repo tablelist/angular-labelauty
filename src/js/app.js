@@ -27,10 +27,7 @@ angular.module('angular-labelauty').directive('labelauty', [
           ngModelCtrl.$setViewValue(scope.checked);
         };
 
-        scope.$watch('ngDisabled', val => {
-          console.log('ngDisabled', val);
-          scope.disabled = val;
-        });
+        scope.$watch('ngDisabled', val => scope.disabled = val);
 
         scope.$watch(() => {
           return ngModelCtrl.$modelValue;

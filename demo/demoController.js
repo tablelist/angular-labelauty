@@ -10,5 +10,9 @@ angular.module('demoApp').controller('demoController', [
       off: true,
       disabled: true
     };
+
+    $scope.isDisabled = function(is) {
+      return !!is;
+    };
   }
 ]);
